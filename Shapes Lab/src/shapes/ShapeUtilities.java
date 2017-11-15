@@ -38,8 +38,13 @@ public class ShapeUtilities {
 	 * @return double
 	 */
 	public static double sumArea(Shape[] shapes) {
-		
-		return 0.0;
+		int i = 0;
+		double areaSum = 0.0;
+		while (i < shapes.length) {
+			areaSum = areaSum + shapes[i].calculateArea();
+			i++;
+		}
+		return areaSum;
 	}
 
 	/**
@@ -49,8 +54,13 @@ public class ShapeUtilities {
 	 * @return double
 	 */
 	public static double sumPerimeter(Shape[] shapes) {
-		//blah
-		return 0.0;
+		int i = 0;
+		double perSum = 0.0;
+		while (i < shapes.length) {
+			perSum = perSum + shapes[i].calculatePerimeter();
+			i++;
+		}
+		return perSum;
 	}
 
 }
